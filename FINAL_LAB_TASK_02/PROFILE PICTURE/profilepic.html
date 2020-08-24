@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Picture</title>
+	<script type="text/javascript" src=profilepic.js"></script>
+</head>
+
+<body>
+<center>
+	 <h2>Profile Picture</h2>
+
+		<form method="post" name="profileForm" action="profilepic.php" onsubmit="validateProfilepic()">
+	  	<tr>
+			<td>
+				<label >Name </label> 
+				<input type="text" name="name" value=" "> 
+				<br><br>
+
+				<label > Picture </label> 
+                <input type="file" name="photo" value=" "> <br>
+
+				<br><br>
+				
+			</td>
+		</tr>
+		<button name="Submit">Submit</button>
+		
+
+        </form>
+</center>
+</body>
+</html>
