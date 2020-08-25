@@ -14,18 +14,18 @@
       </td>         
         <tr>            
           <td>Name</td>  
-          <td><input type="text" name="" value="" placeholder="name"></td> 
+          <td><input type="text" name="name" value=" " placeholder="name" onkeyup ="validateName()"></td> 
           <td></td>         
         </tr> 
 
         <tr>            
           <td>Email</td>            
-          <td><input type="text" name="" value="" placeholder="email"></td>          
+          <td><input type="text" name="email" value="" placeholder="email" onkeyup="validateEmail()"> </td>          
           <td></td>         
         </tr> 
 
         <tr>            
-          <td>Gender</td>           
+          <td onkeyup="validateGender()">Gender </td>           
           <td><input type="radio" name="gender" value="" > Male         
             <input type="radio" name="gender" value="" > Female         
             <input type="radio" name="gender" value="" > Other
@@ -76,7 +76,7 @@
         <tr height="50px">          
           <td colspan="3" align="center"> </td>         
         </tr> 
-                
+
         <tr height="50px">          
           <td colspan="3" align="right">
             <input type="Submit" name="" value="Submit">        
