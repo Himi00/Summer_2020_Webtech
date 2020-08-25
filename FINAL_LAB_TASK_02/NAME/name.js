@@ -2,21 +2,21 @@
 
 function validateName()
 {
-   var name=document.Forms["nameForm"]["Name"].value;
+	var name = document.getElementById("Name").value;
 
    if (name == "")
    {  
-      alert("**Name Required**");
+      alert("Please enter name first");
       return false;
    }
-   else if((name.charAt(0)<='A' || name.charAt(0)>='Z') && (name.charAt(0) <='a'|| name.charAt(0)>='z'))
+   else if((name.charAt(0) <= 'a' || name.charAt(0) >= 'z') && (name.charAt(0) <= 'A' || name.charAt(0) >= 'Z'))
 	{
-		alert("**Name must start with a letter**");
+		alert("Name must start with a letter");
 		return false;
 	}
-	else if(name.split("").length<2)
+	else if(name.split(" ").length<2)
 	{
-		alert("**Name must contain at least two words**");
+		alert("Name must contain at least two words");
 		return false;
 	}
 	else
