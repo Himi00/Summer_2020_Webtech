@@ -1,76 +1,87 @@
 <html> 
 <head>    
-    <title>Person Profile</title> 
+
     <script type="text/javascript" src="person_profile.js"></script>
+    <title>Person Profile</title> 
   
 </head>   
 <body>   
  <center>   
- <form method="post" name="Form" action="person_profile.php" onsubmit="validation()">    
+ <form onsubmit="return validation()"  name="Form" method="post"  >    
 
-    <table width="30%" border="1">                    
+    <table width="30%" border="1">  
+
       <td colspan="3" align="center">             
         <h1>Person Profile</h1>           
-      </td>         
+      </td>   
+
         <tr>            
           <td>Name</td>  
-          <td><input type="text" name="name" value=" " placeholder="name" onkeyup ="validateName()"></td> 
-          <td></td>         
+          <td><input type="text" id="name" placeholder="name" onkeyup ="validateName()"></td> 
+          <td id="nameErr" ></td>
+
         </tr> 
 
         <tr>            
           <td>Email</td>            
-          <td><input type="text" name="email" value="" placeholder="email" onkeyup="validateEmail()"> </td>          
-          <td></td>         
+          <td><input type="text" id="email" placeholder="email" onkeyup="validateEmail()"> </td>  
+          <td id="emailErr" ></td>
+        
         </tr> 
 
         <tr>            
           <td onkeyup="validateGender()">Gender </td>           
-          <td><input type="radio" name="gender" value="" > Male         
-            <input type="radio" name="gender" value="" > Female         
-            <input type="radio" name="gender" value="" > Other
-          </td>           
-          <td></td>         
+          <td><input type="radio" id="gender" value="" > Male         
+            <input type="radio" id="gender" value="" > Female         
+            <input type="radio" id="gender" value="" > Other
+          </td> 
+          <td id="genderErr" ></td>
+          
+               
         </tr>  
 
         <tr>            
-          <td>Date of Birth</td>            
-          <td><input type="date" name="dob" value="" placeholder=""></td>           
-          <td></td>         
+          <td>Date of Birth </td>            
+          <td><input type="Date" id="dob" placeholder="" onclick ="validateDOB()"></td>
+
+          <td id="dobErr" ></td>
+
         </tr> 
 
         <tr>            
           <td>Blood Group</td>            
           <td>            
-            <select name="bg">        
-              <option value="">A+</option>        
-              <option value="">A-</option>        
-              <option value="">B+</option>        
-              <option value="">B+</option>        
-              <option value="">AB+</option>         
-              <option value="">AB+</option>         
-              <option value="">O+</option>        
-              <option value="">O-</option>      
+            <select id="bg" onclick="validateBG()">  
+              <option value=""></option>        
+              <option value="A+">A+</option>        
+              <option value="A-">A-</option>        
+              <option value="B+">B+</option>        
+              <option value="B-">B-</option>        
+              <option value="AB+">AB+</option>         
+              <option value="AB-">AB-</option>         
+              <option value="O+">O+</option>        
+              <option value="O-">O-</option>      
             </select>
-          </td>           
-          <td></td>         
+          </td> 
+           <td id="bgErr" ></td>
+          
         </tr> 
 
         <tr>            
-          <td>Degree</td>           
+          <td>Degree </td>           
           <td>
-            <input type="radio" name="degree" value="" > SSC          
-            <input type="radio" name="degree" value="" > HSC        
-            <input type="radio" name="degree" value="" > BSc        
-            <input type="radio" name="degree" value="" > MSc      
+            <input type="radio" id ="degree"  > SSC          
+            <input type="radio" id="degree"  > HSC        
+            <input type="radio" id="degree"  > BSc        
+            <input type="radio" id="degree"  > MSc      
           </td>           
-          <td></td>         
+           <td id="degreeErr" ></td>
         </tr>   
 
         <tr>            
           <td>Photo</td>            
-          <td><input type="file" name=""> <br><br></td>           
-          <td></td>         
+          <td><input type="file" id="Photo" onclick="validateProfilepic()"></td>           
+           <td id="photoErr" ></td>
         </tr>  
 
         <tr height="50px">          
