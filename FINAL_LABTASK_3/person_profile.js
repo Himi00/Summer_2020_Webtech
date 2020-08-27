@@ -1,23 +1,22 @@
-function validation()
-{  
 
- function validateName()
+function validateName()
     {
-         var name=document.Forms["name"].value;
+        var name = document.getElementById("name").value;
+
 
            if (name == "")
              {  
-                alert("**Name Required**");
+            document.getElementById("nameErr").innerHTML="field can't be empty";
                 return false;
              }
           else if((name.charAt(0) <= 'A' || name.charAt(0)>='Z') && (name.charAt(0) <='a'|| name.charAt(0)>='z'))
 	        {
-		         alert("**Name must start with a letter**");
+            document.getElementById("nameErr").innerHTML="Name should have alphabests only";
 		         return false;
 	        }
-	      else if(name.split("").length < 2)
+	      else if(name.split("").length =< 2)
 	        {
-		         alert("**Name must contain at least two words**");
+            document.getElementById("nameErr").innerHTML="Name can not have only 2 letters in it ";
 		         return false;
 	        }
 	      else
@@ -26,17 +25,17 @@ function validation()
 	        }
 
     }
-    function validateEmail()
+function validateEmail()
     {
-	     var email = document.forms["email"].value;
-	     if (email==" ") 
+	     var name = document.getElementById("email").value;
+	     if (email=="") 
 	        {
-	          	alert("Email Required");
+            document.getElementById("emailErr").innerHTML="field can't be empty";
 		        return false;
 	        }
 	     if ((email.indexOf("@")=<0) || (email.indexOf(".com")=<0)) 
 	        {
-		        alert("Email invalid");
+            document.getElementById("emailErr").innerHTML="Invalid email Example: something@some.com";
 		        return false;
 	        }
 	     else
@@ -45,17 +44,90 @@ function validation()
 	        }
 
     }
-    function validateGender()
+function validateGender()
     {
-	     var gender = document.forms["gender"].value;
+	      var name = document.getElementById("gender").value;
 	      if (gender==" ") 
 	         {
-		         alert("At least one of them has to be selected");
+            document.getElementById("genderErr").innerHTML="you must select gender";
 		         return false;
 	         }
 	      else
 	         { 
 		         return true;
 	         }
+
      }
+
+function validateDOB()
+   {
+	var date = document.getElementById("dob").value;
+	
+	if (date=="") 
+	{
+        document.getElementById("dobErr").innerHTML="you must select Date of Birth";
+		return false;
+	}
+	
+	else
+	{ 
+		return true;
+	}
+
+    }
+function validateBG()
+{
+   var bg = document.getElementById("bg").value;	
+	if(	var date = document.getElementById("dob").selectedIndex == 0;
+) 
+	{
+        document.getElementById("bgErr").innerHTML="you must select Blood Group";
+	}
+	else
+	{ 
+		return true;
+	}
+}
+function validateDegree()
+{
+   var degree = document.getElementById("degree").value;	
+	if (degree=="") 
+	{
+		alert("At least one of them has to be selected");
+		return false;
+	}
+	else
+	{ 
+		return true;
+	}
+}
+
+function validateProfilepic()
+{
+   var photo = document.getElementById("photo").value;	
+	
+
+	 if(photo== "")
+	{
+		alert("Picture Required");
+	}
+	else
+	{ 
+		return true;
+	}
+}
+
+function validation()
+{
+
+if( validateName()==empty || validateEmail()== empty || validateGender()== empty || validateDOB()==empty 
+    || validateBG()==empty || validateDegree()==empty || validateProfilepic()==empty)
+    {
+     alert("please Fill up the form ");
+    }
+    else 
+	{
+      	return true;
+
+	}
 }
