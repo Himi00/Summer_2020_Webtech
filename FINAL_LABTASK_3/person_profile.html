@@ -7,7 +7,7 @@
 </head>   
 <body>   
  <center>   
- <form onsubmit="return validation()"  name="Form" method="post"  >    
+ <form  name="Form" method="post"  >    
 
     <table width="30%" border="1">  
 
@@ -17,23 +17,23 @@
 
         <tr>            
           <td>Name</td>  
-          <td><input type="text" id="name" placeholder="name" onkeyup ="validateName()"></td> 
+          <td><input type="text" id="name" placeholder="name" onkeyup ="validateName()" ></td> 
           <td id="nameErr" ></td>
 
         </tr> 
 
         <tr>            
           <td>Email</td>            
-          <td><input type="text" id="email" placeholder="email" onkeyup="validateEmail()"> </td>  
+          <td><input type="text" id="email" placeholder="email" onkeyup="validateEmail()" > </td>  
           <td id="emailErr" ></td>
         
         </tr> 
 
         <tr>            
           <td onkeyup="validateGender()">Gender </td>           
-          <td><input type="radio" id="gender" value="" > Male         
-            <input type="radio" id="gender" value="" > Female         
-            <input type="radio" id="gender" value="" > Other
+          <td><input type="radio" id="gender" value="Male" > Male         
+            <input type="radio" id="gender" value="Female" > Female         
+            <input type="radio" id="gender" value="Other" > Other
           </td> 
           <td id="genderErr" ></td>
           
@@ -42,7 +42,7 @@
 
         <tr>            
           <td>Date of Birth </td>            
-          <td><input type="Date" id="dob" placeholder="" onclick ="validateDOB()"></td>
+          <td><input type="Date" id="dob" placeholder="" onclick ="validateDOB()" ></td>
 
           <td id="dobErr" ></td>
 
@@ -51,7 +51,7 @@
         <tr>            
           <td>Blood Group</td>            
           <td>            
-            <select id="bg" onclick="validateBG()">  
+            <select id="bg" onclick="validateBG()" >  
               <option value=""></option>        
               <option value="A+">A+</option>        
               <option value="A-">A-</option>        
@@ -70,7 +70,7 @@
         <tr>            
           <td>Degree </td>           
           <td>
-            <input type="radio" id ="degree"  > SSC          
+            <input type="radio" id ="degree" > SSC          
             <input type="radio" id="degree"  > HSC        
             <input type="radio" id="degree"  > BSc        
             <input type="radio" id="degree"  > MSc      
@@ -80,7 +80,7 @@
 
         <tr>            
           <td>Photo</td>            
-          <td><input type="file" id="Photo" onclick="validateProfilepic()"></td>           
+          <td><input type="file" id="Photo" onclick="validateProfilepic()" ></td>           
            <td id="photoErr" ></td>
         </tr>  
 
@@ -90,7 +90,7 @@
 
         <tr height="50px">          
           <td colspan="3" align="right">
-            <input type="Submit" name="" value="Submit">        
+            <input type="Submit" name="" value="Submit" onclick="validation()">        
             <input type="Reset" name="" value="Reset">
           </td>         
         </tr>  
