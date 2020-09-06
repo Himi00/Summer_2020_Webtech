@@ -9,17 +9,17 @@ function validateName()
             document.getElementById("nameErr").innerHTML="field can't be empty";
                // return false;
              }
-           if((name.charAt(0) <= 'A' || name.charAt(0)>='Z') && (name.charAt(0) <='a'|| name.charAt(0)>='z'))
+           else if((name.charAt(0) <= 'A' || name.charAt(0)>='Z') && (name.charAt(0) <='a'|| name.charAt(0)>='z'))
 	        {
             document.getElementById("nameErr").innerHTML="Name should have alphabests only";
 		         //return false;
 	        }
-	       if(name.split("").length <= 2)
+	       else if(name.split("").length <= 2)
 	        {
             document.getElementById("nameErr").innerHTML="Name can not have only 2 letters in it ";
 		         //return false;
 	        }
-	      if(name.split("").length>2)
+	      else if(name.split("").length>2)
 	      {
 	      	document.getElementById("nameErr").innerHTML="";
 
@@ -31,16 +31,16 @@ function validateEmail()
 	     var email = document.getElementById("email").value;
 	     if (email=="") 
 	        {
-	        	console.log("field can't be empty");
+	        	//console.log("field can't be empty");
             document.getElementById("emailErr").innerHTML="field can not be empty";
 		    }
 
-	     if ((email.indexOf("@")<=0) || (email.indexOf(".com")<=0)) 
+	    else if ((email.indexOf("@")<=0) || (email.indexOf(".com")<=0)) 
 	        {
 	        	console.log("Invalid email Example: something@some.com");
             document.getElementById("emailErr").innerHTML="Invalid email Example: something@some.com";
 		    }
-        if ((email.indexOf("@")>0) || (email.indexOf(".com")>0)) 
+       else if ((email.indexOf("@")>0) || (email.indexOf(".com")>0)) 
 	        {
             document.getElementById("emailErr").innerHTML="";
 		    }	     
@@ -53,7 +53,9 @@ function validateGender()
 	         {
             document.getElementById("genderErr").innerHTML="you must select gender";
 	         }
-	      if (gender==" ") 
+	     else
+		     
+		     if (gender==" ") 
 	         {
             document.getElementById("genderErr").innerHTML="";
 	         }	         
