@@ -1,3 +1,7 @@
+<?php
+include ('../model/db_connect.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <center>
